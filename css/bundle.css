@@ -1,116 +1,104 @@
 body {
-  background: #f6f6f6;
+  background: white;
   margin: 0px;
   font-family: 'Open Sans', sans-serif; }
-  body > .top-bar {
-    width: 100%;
-    height: 70px;
-    padding: 10px; }
-    body > .top-bar > .logo-container .logo {
-      height: 50px; }
+  body > .navbar {
+    width: 100%; }
+    body > .navbar > .navbar-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px;
+      max-width: 1024px;
+      margin: 0 auto; }
+      body > .navbar > .navbar-content > .navbar-left {
+        height: 80px;
+        display: flex;
+        align-items: center; }
+        body > .navbar > .navbar-content > .navbar-left > .logo {
+          width: 200px; }
+      body > .navbar > .navbar-content > .navbar-right {
+        height: 80px;
+        display: flex;
+        align-items: center;
+        padding-bottom: 10px; }
+  body > .content-container {
+    width: 100%; }
+    body > .content-container > .content {
+      padding: 100px 0;
+      display: flex;
+      align-items: center;
+      flex-direction: column; }
+      body > .content-container > .content > video {
+        width: 40%; }
+      body > .content-container > .content > .big-text {
+        position: relative;
+        font-size: 24px;
+        color: black; }
+        body > .content-container > .content > .big-text > .super-top-container {
+          position: relative;
+          padding: 0 170px; }
+          body > .content-container > .content > .big-text > .super-top-container > .super-top {
+            top: -15px;
+            left: 5px;
+            position: absolute;
+            font-size: 33px;
+            font-weight: 800;
+            color: #27aae1;
+            transform: rotate(3deg);
+            border: 5px solid #27aae1;
+            border-radius: 5px;
+            width: 330px; }
+    body > .content-container > .transition {
+      background: -moz-linear-gradient(90deg, #27aae1 0%, white 100%);
+      background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, white), color-stop(100%, #27aae1));
+      background: -webkit-linear-gradient(90deg, #27aae1 0%, white 100%);
+      background: -o-linear-gradient(90deg, #27aae1 0%, white 100%);
+      background: -ms-linear-gradient(90deg, #27aae1 0%, white 100%);
+      background: linear-gradient(0deg, #27aae1 0%, white 100%); }
+  body .install-btn {
+    padding: 10px;
+    border: 1px solid #27aae1;
+    border-radius: 5px;
+    text-decoration: none;
+    color: #27aae1; }
+    body .install-btn.large-btn {
+      padding: 25px;
+      font-size: 27px; }
+  body .install-btn:active {
+    border: none;
+    border: 1px solid #27aae1;
+    border-radius: 5px;
+    text-decoration: none;
+    background: #27aae1;
+    color: white; }
+  body .tt-blue {
+    color: #27aae1 !important; }
 
 @media only screen and (max-width: 768px) {
-  body > .top-bar {
-    width: 100%;
-    height: 70px;
-    padding: 10px; }
-    body > .top-bar > .logo-container {
-      width: 100%;
-      text-align: center; }
-      body > .top-bar > .logo-container .logo {
-        height: 30px; } }
-.tickbar-container {
-  display: flex;
-  justify-content: center; }
-  .tickbar-container > .tickbar {
-    position: relative;
-    width: 40%;
-    background: #3C3C3C;
+  body > .navbar > .navbar-content {
+    flex-direction: column; }
+    body > .navbar > .navbar-content > .navbar-right {
+      display: none; }
+  body > .content-container {
+    width: 100%; }
+    body > .content-container > .content {
+      padding-top: 0px; }
+      body > .content-container > .content > video {
+        width: 100%; }
+      body > .content-container > .content > .big-text {
+        font-size: 15px; }
+        body > .content-container > .content > .big-text > .super-top-container {
+          padding: 0px 105px; }
+          body > .content-container > .content > .big-text > .super-top-container > .super-top {
+            font-size: 20px;
+            width: 200px; }
+  body .install-btn {
+    padding: 10px;
+    border: 1px solid #27aae1;
     border-radius: 5px;
-    box-shadow: 3px 5px 30px 0px rgba(0, 0, 0, 0.6); }
-    .tickbar-container > .tickbar > #icon {
-      all: unset;
-      border: 0;
-      /* width: 30px; */
-      height: 30px;
-      position: absolute;
-      top: 20px;
-      left: 15px; }
-    .tickbar-container > .tickbar > #tickbar-text {
-      border: none;
-      outline: none;
-      height: 50px;
-      letter-spacing: 2px;
-      text-indent: 60px;
-      padding: 10px 0;
-      width: 100%;
-      font-size: 30px;
-      background: #3C3C3C;
-      border-radius: 5px 5px 0 0;
-      -webkit-box-sizing: content-box;
-      box-sizing: content-box;
-      color: white;
-      margin: 0px; }
-    .tickbar-container > .tickbar > #tickbar-result-container {
-      width: 100%;
-      max-height: 300px;
-      overflow-y: auto;
-      padding: 2px 0px;
-      border-radius: 0 0 5px 5px;
-      background: #3C3C3C;
-      box-sizing: content-box; }
-      .tickbar-container > .tickbar > #tickbar-result-container ::-webkit-scrollbar {
-        background: #3c3c3c;
-        border-radius: 5px; }
-      .tickbar-container > .tickbar > #tickbar-result-container > .tickbar-result {
-        color: white;
-        position: relative;
-        margin: 15px 10px 5px 10px;
-        padding: 10px;
-        border-radius: 5px; }
-        .tickbar-container > .tickbar > #tickbar-result-container > .tickbar-result.tickbar-selected {
-          background: #4295eb; }
-        .tickbar-container > .tickbar > #tickbar-result-container > .tickbar-result > .search-name {
-          all: unset;
-          position: absolute;
-          display: block;
-          top: 5px;
-          right: 5px;
-          font-size: 12px;
-          color: #cecece; }
-        .tickbar-container > .tickbar > #tickbar-result-container > .tickbar-result > .title {
-          all: unset;
-          width: 80%;
-          display: block;
-          white-space: nowrap;
-          font-size: 15px;
-          overflow: hidden;
-          text-overflow: ellipsis;
-          min-height: 20px; }
-        .tickbar-container > .tickbar > #tickbar-result-container > .tickbar-result > .url {
-          all: unset;
-          font-size: 10px;
-          display: block;
-          color: #cecece;
-          width: 80%;
-          white-space: nowrap;
-          overflow: hidden;
-          text-overflow: ellipsis; }
-
-@keyframes reset {
-  0% {
-    opacity: 0; }
-  100% {
-    opacity: 0; } }
-
-@keyframes fade-in {
-  0% {
-    opacity: 0; }
-  100% {
-    opacity: 1; } }
-
-.fade-in {
-  animation-name: reset, fade-in;
-  animation-duration: 100ms;
-  animation-timing-function: ease-in;
-  animation-iteration-count: 1; }
+    text-decoration: none;
+    color: #27aae1; }
+    body .install-btn.large-btn {
+      padding: 10px;
+      font-size: inherit; } }
