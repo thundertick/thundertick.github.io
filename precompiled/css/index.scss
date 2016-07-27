@@ -37,6 +37,12 @@ body{
 			>video{
 				width:40%;
 			}
+			>hr{
+				border: none;
+				border-top: 1px solid #e7e7e7;
+				height: 1px;
+				width: 60%;
+			}
 			>.big-text{
 				position:relative;
 				font-size:24px;
@@ -56,6 +62,33 @@ body{
 						border-radius: 5px;
 						width:330px;
 					}	
+				}
+			}
+			.row{
+				display:flex;
+				flex-direction:row;
+				max-width:100%;
+				padding:70px 100px;
+				justify-content:center;
+				align-items:center;
+				min-height:600px;
+				.left,.right{
+					display:flex;
+					padding:10px;
+					flex-direction:column;	
+					justify-content:center;
+					align-items:center;
+					font-size:16px;
+					color:white;
+					line-height:1.5;
+					letter-spacing:1px;
+					.screenshot{
+						width:70%;
+						height:auto;
+					}
+					.para{
+						margin-top:12px;
+					}
 				}
 			}
 		}
@@ -89,6 +122,15 @@ body{
 	}
 	.tt-blue{
 		color:#27aae1 !important;
+	}
+
+	.stamp{
+		font-size: 33px;
+		font-weight: 800;
+		color: white;
+		padding:10px;
+		border: 5px solid white;
+		border-radius: 5px;
 	}
 }
 
