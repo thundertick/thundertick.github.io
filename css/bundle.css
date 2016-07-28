@@ -24,13 +24,18 @@ body {
         padding-bottom: 10px; }
   body > .content-container {
     width: 100%; }
+    body > .content-container > #top-content {
+      justify-content: center; }
     body > .content-container > .content {
-      padding: 100px 0;
+      padding: 100px 0 0;
       display: flex;
       align-items: center;
       flex-direction: column; }
       body > .content-container > .content > video {
         width: 40%; }
+      body > .content-container > .content.footer {
+        background: #333;
+        height: 500px; }
       body > .content-container > .content > hr {
         border: none;
         border-top: 1px solid #e7e7e7;
@@ -57,14 +62,14 @@ body {
       body > .content-container > .content .row {
         display: flex;
         flex-direction: row;
-        max-width: 100%;
+        min-width: 100%;
         padding: 70px 100px;
         justify-content: center;
         align-items: center;
         min-height: 600px; }
         body > .content-container > .content .row .left, body > .content-container > .content .row .right {
           display: flex;
-          padding: 10px;
+          padding: 50px;
           flex-direction: column;
           justify-content: center;
           align-items: center;
@@ -73,8 +78,9 @@ body {
           line-height: 1.5;
           letter-spacing: 1px; }
           body > .content-container > .content .row .left .screenshot, body > .content-container > .content .row .right .screenshot {
-            width: 70%;
-            height: auto; }
+            width: 100%;
+            height: auto;
+            max-width: 700px; }
           body > .content-container > .content .row .left .para, body > .content-container > .content .row .right .para {
             margin-top: 12px; }
     body > .content-container > .transition {
@@ -128,6 +134,14 @@ body {
           body > .content-container > .content > .big-text > .super-top-container > .super-top {
             font-size: 20px;
             width: 200px; }
+      body > .content-container > .content .row {
+        flex-wrap: wrap;
+        padding: 70px 0; }
+        body > .content-container > .content .row .left, body > .content-container > .content .row .right {
+          width: 100% !important;
+          padding: 10px; }
+        body > .content-container > .content .row.reverse-wrap {
+          flex-wrap: wrap-reverse; }
   body .install-btn {
     padding: 10px;
     border: 1px solid #27aae1;

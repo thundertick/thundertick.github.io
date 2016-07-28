@@ -29,13 +29,20 @@ body{
 	}
 	>.content-container{
 		width:100%;
+		>#top-content{
+			justify-content:center;
+		}
 		>.content{
-			padding:100px 0;
+			padding:100px 0 0;
 			display: flex;
 			align-items: center;
 			flex-direction:column;
 			>video{
 				width:40%;
+			}
+			&.footer{
+				background:#333;
+				height:500px;
 			}
 			>hr{
 				border: none;
@@ -67,14 +74,14 @@ body{
 			.row{
 				display:flex;
 				flex-direction:row;
-				max-width:100%;
+				min-width:100%;
 				padding:70px 100px;
 				justify-content:center;
 				align-items:center;
 				min-height:600px;
 				.left,.right{
 					display:flex;
-					padding:10px;
+					padding:50px;
 					flex-direction:column;	
 					justify-content:center;
 					align-items:center;
@@ -83,8 +90,9 @@ body{
 					line-height:1.5;
 					letter-spacing:1px;
 					.screenshot{
-						width:70%;
+						width:100%;
 						height:auto;
+						max-width:700px;
 					}
 					.para{
 						margin-top:12px;
@@ -159,6 +167,17 @@ body{
 							font-size: 20px;
 							width: 200px;
 						}	
+					}
+				}
+				.row{
+					flex-wrap: wrap; 
+					padding:70px 0;
+					.left,.right{
+						width:100% !important;
+						padding:10px;
+					}
+					&.reverse-wrap{
+						flex-wrap: wrap-reverse; 
 					}
 				}
 			}

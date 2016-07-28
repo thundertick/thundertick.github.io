@@ -23,5 +23,6 @@
     "style-loader": "^0.13.1",
     "webpack": "^1.13.1"
   },
-  "homepage": "https://github.com/thundertick/thundertick.com#readme"
+  "homepage": "https://github.com/thundertick/thundertick.com#readme",
+  "dependencies": {}
 }
