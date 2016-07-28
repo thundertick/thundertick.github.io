@@ -123,6 +123,8 @@ body {
       display: none; }
   body > .content-container {
     width: 100%; }
+    body > .content-container #top-content {
+      padding-bottom: 100px; }
     body > .content-container > .content {
       padding-top: 0px; }
       body > .content-container > .content > video {
