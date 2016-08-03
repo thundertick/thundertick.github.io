@@ -38,6 +38,32 @@ body {
       body > .content-container > .content.footer {
         background: #333;
         height: 500px; }
+        body > .content-container > .content.footer a {
+          color: white; }
+        body > .content-container > .content.footer ul {
+          list-style: none;
+          list-style-type: none; }
+          body > .content-container > .content.footer ul > li {
+            padding: 5px; }
+        body > .content-container > .content.footer #mc_embed_signup {
+          background: none; }
+          body > .content-container > .content.footer #mc_embed_signup input[type="submit"] {
+            padding: 10px;
+            border: 1px solid white;
+            border-radius: 5px;
+            text-decoration: none;
+            color: white;
+            background: none;
+            margin-top: 10px; }
+          body > .content-container > .content.footer #mc_embed_signup input[type="email"] {
+            height: 20px;
+            font-size: 14px;
+            padding: 5px;
+            width: 100%;
+            background: none;
+            color: white;
+            border: 1px solid white;
+            border-radius: 5px; }
       body > .content-container > .content > hr {
         border: none;
         border-top: 1px solid #e7e7e7;
