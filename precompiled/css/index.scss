@@ -162,8 +162,11 @@ body{
 			}
 			>.content{
 				padding-top:0px;
-				>video{
+				>#video, #gif{
 					width:100%;
+				}
+				>#gif{
+					display:none;
 				}
 				>.big-text{
 					font-size: 15px;
