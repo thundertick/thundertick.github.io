@@ -36,8 +36,7 @@ body {
       body > .content-container > .content > #gif {
         display: none; }
       body > .content-container > .content.footer {
-        background: #333;
-        height: 500px; }
+        background: #333; }
         body > .content-container > .content.footer a {
           color: white; }
         body > .content-container > .content.footer ul {
@@ -91,7 +90,7 @@ body {
         display: flex;
         flex-direction: row;
         min-width: 100%;
-        padding: 70px 100px;
+        padding: 70px 0px;
         justify-content: center;
         align-items: center;
         min-height: 600px; }
