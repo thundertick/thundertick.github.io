@@ -31,8 +31,10 @@ body {
       display: flex;
       align-items: center;
       flex-direction: column; }
-      body > .content-container > .content > video {
+      body > .content-container > .content > #video, body > .content-container > .content #gif {
         width: 40%; }
+      body > .content-container > .content > #gif {
+        display: none; }
       body > .content-container > .content.footer {
         background: #333;
         height: 500px; }
