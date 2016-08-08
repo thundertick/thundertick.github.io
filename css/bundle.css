@@ -22,6 +22,8 @@ body {
         display: flex;
         align-items: center;
         padding-bottom: 10px; }
+        body > .navbar > .navbar-content > .navbar-right iframe {
+          margin-right: 10px; }
   body > .content-container {
     width: 100%; }
     body > .content-container > #top-content {
