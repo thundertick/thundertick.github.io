@@ -18,7 +18,7 @@ function setInstalled(){
 	$('.install-btn').html('Thundertick Installed');
 }
 if(navigator.userAgent.toLowerCase().indexOf('chrome')) {
-	if(chrome && chrome.app){
+	if(chrome != undefined && chrome.app){
 		if(chrome.app.isInstalled){
 			setInstalled();
 		}
@@ -26,7 +26,7 @@ if(navigator.userAgent.toLowerCase().indexOf('chrome')) {
 }
 $('.install-btn').on('click', function(e){
 	if(navigator.userAgent.toLowerCase().indexOf('chrome')) {
-		if(chrome && chrome.webstore){
+		if(chrome != undefined && chrome.webstore){
 			try{
 				chrome.webstore.install("https://chrome.google.com/webstore/detail/fjlfmlponipgmabidmcmijicbbfnbnnj",function(){
 					setInstalled();
