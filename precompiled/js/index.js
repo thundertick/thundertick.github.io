@@ -32,6 +32,8 @@ $('.install-btn').on('click', function(e){
 			console.error(e);
 			window.top.location = "https://chrome.google.com/webstore/detail/fjlfmlponipgmabidmcmijicbbfnbnnj/";
 		}
+	} else if(navigator.userAgent.toLowerCase().indexOf('firefox')) {
+		window.top.location = "https://addons.mozilla.org/en-GB/firefox/addon/thundertick/";
 	} else {
 		window.top.location = "https://chrome.google.com/webstore/detail/fjlfmlponipgmabidmcmijicbbfnbnnj/";
 	}
