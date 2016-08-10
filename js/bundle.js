@@ -69,14 +69,16 @@
 		}
 	}
 	$('.install-btn').on('click', function(e){
-		if(chrome && chrome.webstore){
-			try{
-				chrome.webstore.install("https://chrome.google.com/webstore/detail/fjlfmlponipgmabidmcmijicbbfnbnnj",function(){
-					setInstalled();
-				}, function(){})
-			} catch(e){
-				console.error(e);
-				window.top.location = "https://chrome.google.com/webstore/detail/fjlfmlponipgmabidmcmijicbbfnbnnj/";
+		if(navigator.userAgent.toLowerCase().indexOf('chrome')) {
+			if(chrome && chrome.webstore){
+				try{
+					chrome.webstore.install("https://chrome.google.com/webstore/detail/fjlfmlponipgmabidmcmijicbbfnbnnj",function(){
+						setInstalled();
+					}, function(){})
+				} catch(e){
+					console.error(e);
+					window.top.location = "https://chrome.google.com/webstore/detail/fjlfmlponipgmabidmcmijicbbfnbnnj/";
+				}
 			}
 		} else if(navigator.userAgent.toLowerCase().indexOf('firefox')) {
 			window.top.location = "https://addons.mozilla.org/en-GB/firefox/addon/thundertick/";
