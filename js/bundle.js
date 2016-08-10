@@ -63,16 +63,16 @@
 	function setInstalled(){
 		$('.install-btn').html('Thundertick Installed');
 	}
-	if(navigator.userAgent.toLowerCase().indexOf('chrome')) {
-		if(typeof chrome != 'undefined'){
+	if(navigator.userAgent.toLowerCase().indexOf('chrome') != -1) {
+		if(chrome && chrome.app){
 			if(chrome.app.isInstalled){
 				setInstalled();
 			}
 		}
 	}
 	$('.install-btn').on('click', function(e){
-		if(navigator.userAgent.toLowerCase().indexOf('chrome')) {
-			if(chrome != undefined && chrome.webstore){
+		if(navigator.userAgent.toLowerCase().indexOf('chrome') != -1) {
+			if(chrome && chrome.webstore){
 				try{
 					chrome.webstore.install("https://chrome.google.com/webstore/detail/fjlfmlponipgmabidmcmijicbbfnbnnj",function(){
 						setInstalled();
@@ -82,7 +82,7 @@
 					window.top.location = "https://chrome.google.com/webstore/detail/fjlfmlponipgmabidmcmijicbbfnbnnj/";
 				}
 			}
-		} else if(navigator.userAgent.toLowerCase().indexOf('firefox')) {
+		} else if(navigator.userAgent.toLowerCase().indexOf('firefox') != -1) {
 			window.top.location = "https://addons.mozilla.org/en-GB/firefox/addon/thundertick/";
 		} else {
 			window.top.location = "https://chrome.google.com/webstore/detail/fjlfmlponipgmabidmcmijicbbfnbnnj/";
