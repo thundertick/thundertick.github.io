@@ -18,7 +18,7 @@ function setInstalled(){
 	$('.install-btn').html('Thundertick Installed');
 }
 if(navigator.userAgent.toLowerCase().indexOf('chrome')) {
-	if(chrome != undefined && chrome.app){
+	if(chrome != undefined){
 		if(chrome.app.isInstalled){
 			setInstalled();
 		}
